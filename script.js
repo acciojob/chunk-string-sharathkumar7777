@@ -1,6 +1,5 @@
-function stringChop(str, size) {
-  // your code here
-	function chunkString(str, size) {
+
+function chunkString(str, size) {
     if (str === null) return [];
 
     const result = [];
@@ -10,8 +9,6 @@ function stringChop(str, size) {
     }
 
     return result;
-}
-
 }
 
 // Do not change the code below
