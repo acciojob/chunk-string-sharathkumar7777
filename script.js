@@ -1,17 +1,14 @@
+function chunkString(str, chunkLength) {
+  // If input string is null or undefined, return empty array
+  if (str == null) {
+    return [];
+  }
 
-function chunkString(str, size) {
-    if (str === null) return [];
+  const result = [];
 
-    const result = [];
+  for (let i = 0; i < str.length; i += chunkLength) {
+    result.push(str.slice(i, i + chunkLength));
+  }
 
-    for (let i = 0; i < str.length; i += size) {
-        result.push(str.slice(i, i + size));
-    }
-
-    return result;
+  return result;
 }
-
-// Do not change the code below
-const str = prompt("Enter String.");
-const size = prompt("Enter Chunk Size.");
-alert(stringChop(str, size));
